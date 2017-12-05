@@ -26,4 +26,8 @@ echo; echo 'Installation has completed.'
 echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 echo
+sed -i 's/APF_BAN=.*/APF_BAN=0/' /usr/local/ddos/ddos.conf
+sed -i 's/FREQ=.*/FREQ=150/' /usr/local/ddos/ddos.conf 
+sed -i 's/BAN_PERIOD=.*/BAN_PERIOD=3600/' /usr/local/ddos/ddos.conf
+sed -i 's#0-59/1#0-59/2#' /etc/cron.d/ddos.cron
 cat /usr/local/ddos/LICENSE 
